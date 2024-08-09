@@ -7,7 +7,7 @@
 lvim.plugins = {
   "supermaven-inc/supermaven-nvim",
   "shaunsingh/nord.nvim",
-  "junegunn/fzf"
+  "ibhagwan/fzf-lua",
 }
 
 local linters = require "lvim.lsp.null-ls.linters"
