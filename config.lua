@@ -5,10 +5,36 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 --
 lvim.plugins = {
-  "supermaven-inc/supermaven-nvim",
-  "shaunsingh/nord.nvim",
-  "ibhagwan/fzf-lua",
+  {
+    "supermaven-inc/supermaven-nvim",
+    config = true
+  },
+  {
+  "nvim-neotest/neotest",
+    dependencies = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-neotest/neotest-jest",
+      "marilari88/neotest-vitest",
+      "nvim-treesitter/nvim-treesitter"
+    },
+    config = function()
+      require("neotest").setup({
+        adapters = {
+          require("neotest-vitest"),
+        }
+      })
+    end,
+  },
+  {
+    "gbprod/nord.nvim",
+    lazy = false,
+    priority = 1000
+  },
 }
+
+lvim.colorscheme = "nord"
 
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
