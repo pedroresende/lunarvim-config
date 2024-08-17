@@ -5,6 +5,7 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 --
 lvim.plugins = {
+  { 'wakatime/vim-wakatime', lazy = false },
   {
     "supermaven-inc/supermaven-nvim",
     config = true
