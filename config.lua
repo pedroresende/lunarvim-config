@@ -11,6 +11,9 @@ lvim.plugins = {
     config = true
   },
   {
+    "dinhhuy258/vim-local-history"
+  },
+  {
   "nvim-neotest/neotest",
     dependencies = {
       "nvim-neotest/nvim-nio",
