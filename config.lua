@@ -14,7 +14,12 @@ lvim.plugins = {
     "dinhhuy258/vim-local-history"
   },
   {
-  "nvim-neotest/neotest",
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {},
+  },
+  {
+    "nvim-neotest/neotest",
     dependencies = {
       "nvim-neotest/nvim-nio",
       "nvim-lua/plenary.nvim",
@@ -39,6 +44,10 @@ lvim.plugins = {
 }
 
 lvim.colorscheme = "nord"
+
+-- Folding
+vim.api.nvim_set_option("foldmethod", "indent")
+vim.api.nvim_set_option("foldlevel", 99)
 
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
