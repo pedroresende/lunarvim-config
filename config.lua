@@ -27,6 +27,11 @@ lvim.plugins = {
     "mg979/vim-visual-multi",
     lazy = false,
     priority = 1000
+  },
+    {
+    "onsails/lspkind.nvim",
+    lazy = false,
+    priority = 1000
   }
 }
 
